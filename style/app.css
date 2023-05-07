@@ -58,6 +58,9 @@ body #icon use {
   align-items: center;
   gap: 50px;
 }
+.header__main .header__nav .header__item:hover {
+  color: #F28095;
+}
 
 h1 {
   color: red;
