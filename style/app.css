@@ -10,6 +10,17 @@
     background-position: 0% 50%;
   }
 }
+@keyframes floating {
+  0% {
+    transform: translateY(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-5px) translateY(-5px) rotate(-5deg);
+  }
+  100% {
+    transform: translateY(0) translateY(0);
+  }
+}
 :root {
   font-family: "Inter", sans-serif;
   width: 100%;
@@ -41,38 +52,66 @@ body {
 body #icon use {
   fill: #071040;
 }
-@media (min-width: 1800px) {
+@media (min-width: 2000px) {
   body {
-    width: 1800px;
-    margin-left: calc((100vw - 1800px) / 2);
+    width: 2000px;
+    margin-left: calc((100vw - 2000px) / 2);
   }
 }
 
-.header__main {
+.head__meow {
   height: 100px;
-  padding: 16px;
+  padding: 0 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.header__main .header__logo {
+@media (max-width: 1080px) and (orientation: landscape), (max-width: 800px) and (orientation: portrait) {
+  .head__meow {
+    padding: 0 20px;
+  }
+}
+.head__meow .head__logo {
   display: flex;
   align-items: center;
 }
-.header__main .header__logo img {
+.head__meow .head__logo img {
   cursor: pointer;
   height: 65px;
   width: auto;
 }
-.header__main .header__nav {
+@media (max-width: 1080px) and (orientation: landscape) {
+  .head__meow .head__logo img {
+    display: none;
+  }
+}
+@media (min-width: 50px) and (orientation: portrait) {
+  .head__meow .head__logo img {
+    display: none;
+  }
+}
+.head__meow .head__logo .head__logo-mobile {
+  display: none;
+}
+@media (max-width: 1080px) and (orientation: landscape) {
+  .head__meow .head__logo .head__logo-mobile {
+    display: flex;
+  }
+}
+@media (min-width: 50px) and (orientation: portrait) {
+  .head__meow .head__logo .head__logo-mobile {
+    display: flex;
+  }
+}
+.head__meow .head__nav {
   display: flex;
   align-items: center;
   gap: 50px;
 }
-.header__main .header__nav .header__item {
+.head__meow .head__nav .head__item {
   position: relative;
 }
-.header__main .header__nav .header__item::before {
+.head__meow .head__nav .head__item::before {
   content: "";
   position: absolute;
   top: 26px;
@@ -83,15 +122,45 @@ body #icon use {
   transition: width 0.2s ease-in-out;
   transform-origin: left;
 }
-.header__main .header__nav .header__item:hover {
+.head__meow .head__nav .head__item:hover {
   color: #F28095;
 }
-.header__main .header__nav .header__item:hover::before {
+.head__meow .head__nav .head__item:hover::before {
   width: 100%;
   transform-origin: right;
 }
+@media (max-width: 800px) and (orientation: portrait) {
+  .head__meow .head__nav .head__item {
+    display: none;
+  }
+}
+.head__meow .head__nav .head__item.mob {
+  display: none;
+}
+@media (max-width: 800px) and (orientation: portrait) {
+  .head__meow .head__nav .head__item.mob {
+    display: flex;
+  }
+  .head__meow .head__nav .head__item.mob img {
+    width: 20px;
+    height: auto;
+  }
+}
+@media (max-width: 1080px) and (orientation: landscape) {
+  .head__meow .head__nav {
+    gap: 20px;
+  }
+  .head__meow .head__nav .head__item {
+    font-size: 14px;
+  }
+}
+@media (max-width: 800px) and (orientation: portrait) {
+  .head__meow .head__nav {
+    gap: 20px;
+  }
+}
 
-.main__home .main__section {
+.meow__home .meow__section {
   display: flex;
   align-items: center;
   height: 100%;
@@ -100,34 +169,133 @@ body #icon use {
   width: 100%;
   position: relative;
 }
-.main__home .main__section .main__article {
+@media (max-width: 1080px) and (orientation: landscape) {
+  .meow__home .meow__section {
+    padding: 0 50px;
+    background-image: url("/img/background.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+@media (min-width: 50px) and (orientation: portrait) {
+  .meow__home .meow__section {
+    padding: 0 50px;
+    background-image: url("/img/background.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.meow__home .meow__section .meow__article {
   width: 70%;
   padding-left: 5%;
 }
-.main__home .main__section .main__article h1 {
+.meow__home .meow__section .meow__article h1 {
   font-size: 4rem;
   font-weight: 800;
   color: #F28095;
   margin-bottom: 20px;
 }
-.main__home .main__section .main__article h2 {
+.meow__home .meow__section .meow__article h2 {
   font-size: 2.5rem;
   font-weight: 700;
 }
-.main__home .main__section .main__logotipe {
+@media (min-width: 50px) and (orientation: portrait) {
+  .meow__home .meow__section .meow__article {
+    width: 100%;
+  }
+  .meow__home .meow__section .meow__article h1 {
+    text-align: center;
+  }
+  .meow__home .meow__section .meow__article h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 1600px) and (orientation: landscape), (max-width: 1600px) and (orientation: portrait) {
+  .meow__home .meow__section .meow__article h1 {
+    font-size: 3rem;
+  }
+  .meow__home .meow__section .meow__article h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 1300px) and (orientation: landscape), (max-width: 1300px) and (orientation: portrait) {
+  .meow__home .meow__section .meow__article h1 {
+    font-size: 2.5rem;
+  }
+  .meow__home .meow__section .meow__article h2 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 1080px) and (orientation: landscape), (max-width: 1080px) and (orientation: portrait) {
+  .meow__home .meow__section .meow__article {
+    width: 100%;
+  }
+  .meow__home .meow__section .meow__article h1 {
+    text-align: center;
+  }
+  .meow__home .meow__section .meow__article h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 800px) and (orientation: landscape), (max-width: 600px) and (orientation: portrait) {
+  .meow__home .meow__section .meow__article h1 {
+    font-size: 1.5rem;
+  }
+  .meow__home .meow__section .meow__article h2 {
+    font-size: 1rem;
+  }
+}
+.meow__home .meow__section .meow__logotipe {
   position: absolute;
-  left: 55%;
+  height: auto;
+  width: 1000px;
+  right: 0;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   z-index: 0;
+  background-image: url("/img/background.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
 }
-.main__home .main__section .main__logotipe img {
-  height: 600px;
-  width: auto;
-  transform: rotate(-20deg);
+.meow__home .meow__section .meow__logotipe img {
+  height: auto;
+  width: 70%;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@media (min-width: 1800px) and (orientation: landscape) {
+  .meow__home .meow__section .meow__logotipe {
+    width: 1300px;
+  }
+}
+@media (min-width: 50px) and (orientation: portrait) {
+  .meow__home .meow__section .meow__logotipe img {
+    display: none;
+  }
+}
+@media (max-width: 1600px) and (orientation: landscape) {
+  .meow__home .meow__section .meow__logotipe {
+    width: 900px;
+  }
+}
+@media (max-width: 1300px) and (orientation: landscape) {
+  .meow__home .meow__section .meow__logotipe {
+    width: 750px;
+  }
+}
+@media (max-width: 1080px) and (orientation: landscape) {
+  .meow__home .meow__section .meow__logotipe img {
+    display: none;
+  }
 }
 
-.main__nft {
+.meow__nft {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,9 +305,21 @@ body #icon use {
   background-repeat: no-repeat;
   background-position: center;
 }
-.main__nft .title__nft {
-  margin-top: 10%;
+.meow__nft .title__nft {
+  margin-top: 50px;
   font-size: 48px;
   font-weight: 600;
   color: #F28095;
+}
+@media (max-width: 900px) and (orientation: landscape) {
+  .meow__nft .title__nft {
+    margin-top: 10px;
+    font-size: 24px;
+  }
+}
+@media (max-width: 600px) and (orientation: portrait) {
+  .meow__nft .title__nft {
+    margin-top: 10px;
+    font-size: 24px;
+  }
 }/*# sourceMappingURL=app.css.map */
