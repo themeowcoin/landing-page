@@ -7,8 +7,8 @@ function setHeader() {
   let header = document.querySelector('header');
   header.innerHTML = `
   <a href="/" class="head__logo">
-  <img src="/img/logo-desktop.png" alt="logo">
-  <img src="/img/logo.png" alt="logo" class="head__logo-mobile">
+  <img src="../img/logo-desktop.png" alt="logo">
+  <img src="../img/logo.png" alt="logo" class="head__logo-mobile">
   </a>
   <nav class="head__nav">
     <a href="https://twitter.com/the_meowcoin" target="_blank" class="head__item">TWITTER</a>
