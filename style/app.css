@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@keyframes change {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 :root {
   font-family: "Inter", sans-serif;
   width: 100%;
@@ -58,12 +69,62 @@ body #icon use {
   align-items: center;
   gap: 50px;
 }
+.header__main .header__nav .header__item {
+  position: relative;
+}
+.header__main .header__nav .header__item::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #F28095;
+  transition: width 0.2s ease-in-out;
+  transform-origin: left;
+}
 .header__main .header__nav .header__item:hover {
   color: #F28095;
 }
+.header__main .header__nav .header__item:hover::before {
+  width: 100%;
+  transform-origin: right;
+}
 
-h1 {
-  color: red;
+.main__home .main__section {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 50px 200px;
+  min-height: calc(100vh - 100px);
+  width: 100%;
+  position: relative;
+}
+.main__home .main__section .main__article {
+  width: 70%;
+  padding-left: 5%;
+}
+.main__home .main__section .main__article h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #F28095;
+  margin-bottom: 20px;
+}
+.main__home .main__section .main__article h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.main__home .main__section .main__logotipe {
+  position: absolute;
+  left: 55%;
+  display: flex;
+  align-items: center;
+  z-index: 0;
+}
+.main__home .main__section .main__logotipe img {
+  height: 600px;
+  width: auto;
+  transform: rotate(-20deg);
 }
 
 .main__nft {
@@ -80,4 +141,5 @@ h1 {
   margin-top: 10%;
   font-size: 48px;
   font-weight: 600;
+  color: #F28095;
 }/*# sourceMappingURL=app.css.map */
