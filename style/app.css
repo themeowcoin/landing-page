@@ -255,7 +255,7 @@ body #icon use {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  z-index: 0;
+  z-index: -1;
   background-image: url("../img/background.png");
   background-size: contain;
   background-repeat: no-repeat;
