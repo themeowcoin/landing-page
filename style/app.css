@@ -21,6 +21,28 @@
     transform: translateY(0) translateY(0);
   }
 }
+@keyframes floating2 {
+  0% {
+    transform: translateY(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-4px) translateY(-4px) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(0) translateY(0);
+  }
+}
+@keyframes floating3 {
+  0% {
+    transform: translateY(0) translateY(0);
+  }
+  50% {
+    transform: translateX(4px) translateY(4px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0) translateY(0);
+  }
+}
 :root {
   font-family: "Inter", sans-serif;
   width: 100%;
@@ -291,6 +313,207 @@ body #icon use {
 }
 @media (max-width: 1080px) and (orientation: landscape) {
   .meow__home .meow__section .meow__logotipe img {
+    display: none;
+  }
+}
+.meow__home .meownomics__section {
+  position: relative;
+  width: 100%;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+.meow__home .meownomics__section h2 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #F28095;
+  margin-bottom: 80px;
+}
+@media (max-width: 1600px) and (orientation: landscape) {
+  .meow__home .meownomics__section {
+    height: 740px;
+  }
+  .meow__home .meownomics__section h2 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 1300px) and (orientation: landscape) {
+  .meow__home .meownomics__section {
+    height: 590px;
+  }
+  .meow__home .meownomics__section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 1080px) {
+  .meow__home .meownomics__section {
+    height: 450px;
+  }
+  .meow__home .meownomics__section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 650px) {
+  .meow__home .meownomics__section {
+    height: 620px;
+  }
+  .meow__home .meownomics__section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+}
+.meow__home .meownomics__section .charts {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+}
+.meow__home .meownomics__section .charts .charts__image {
+  position: relative;
+  left: calc(-320px + 50% - 350px - 32px);
+}
+@media (max-width: 1600px) and (orientation: landscape) {
+  .meow__home .meownomics__section .charts .charts__image {
+    left: calc(-320px + 50% - 250px - 32px);
+  }
+  .meow__home .meownomics__section .charts .charts__image img {
+    height: 500px;
+    width: auto;
+  }
+}
+@media (max-width: 1300px) and (orientation: landscape) {
+  .meow__home .meownomics__section .charts .charts__image {
+    left: calc(-320px + 50% - 200px - 32px);
+  }
+  .meow__home .meownomics__section .charts .charts__image img {
+    height: 400px;
+  }
+}
+@media (max-width: 1080px) and (orientation: landscape) {
+  .meow__home .meownomics__section .charts .charts__image {
+    left: calc(-280px + 50% - 175px - 32px);
+  }
+  .meow__home .meownomics__section .charts .charts__image img {
+    height: 350px;
+  }
+}
+@media (max-width: 1080px) {
+  .meow__home .meownomics__section .charts {
+    align-items: center;
+    justify-content: center;
+  }
+  .meow__home .meownomics__section .charts .charts__image {
+    position: static;
+  }
+  .meow__home .meownomics__section .charts .charts__image img {
+    height: 300px;
+  }
+}
+@media (max-width: 650px) {
+  .meow__home .meownomics__section .charts {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .meow__home .meownomics__section .charts .charts__image {
+    position: static;
+  }
+  .meow__home .meownomics__section .charts .charts__image img {
+    height: 280px;
+  }
+}
+.meow__home .meownomics__section .charts .toke__details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 320px;
+}
+.meow__home .meownomics__section .charts .toke__details .item__list {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.meow__home .meownomics__section .charts .toke__details .item__list .quote {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+.meow__home .meownomics__section .charts .toke__details .item__list p {
+  font-size: 24px;
+}
+@media (max-width: 1300px) and (orientation: landscape) {
+  .meow__home .meownomics__section .charts .toke__details .item__list .quote {
+    width: 20px;
+    height: 20px;
+  }
+  .meow__home .meownomics__section .charts .toke__details .item__list p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1080px) {
+  .meow__home .meownomics__section .charts .toke__details {
+    width: 280px;
+  }
+  .meow__home .meownomics__section .charts .toke__details .item__list .quote {
+    width: 16px;
+    height: 16px;
+  }
+  .meow__home .meownomics__section .charts .toke__details .item__list p {
+    font-size: 16px;
+  }
+}
+.meow__home .meownomics__section .image__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.meow__home .meownomics__section .image__back .back-1 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 450px;
+  height: auto;
+  animation-name: floating2;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.meow__home .meownomics__section .image__back .back-2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 500px;
+  height: auto;
+  animation-name: floating3;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@media (max-width: 1600px) and (orientation: landscape) {
+  .meow__home .meownomics__section .image__back .back-1 {
+    width: 400px;
+  }
+  .meow__home .meownomics__section .image__back .back-2 {
+    width: 450px;
+  }
+}
+@media (max-width: 1300px) and (orientation: landscape) {
+  .meow__home .meownomics__section .image__back .back-1 {
+    width: 350px;
+  }
+  .meow__home .meownomics__section .image__back .back-2 {
+    width: 400px;
+  }
+}
+@media (max-width: 1080px) {
+  .meow__home .meownomics__section .image__back {
     display: none;
   }
 }
