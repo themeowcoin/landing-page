@@ -43,6 +43,17 @@
     transform: translateY(0) translateY(0);
   }
 }
+@keyframes loading {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
 :root {
   font-family: "Inter", sans-serif;
   width: 100%;
@@ -316,10 +327,40 @@ body #icon use {
     display: none;
   }
 }
+.meow__home .meow__section .button__presale {
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 150px);
+  width: 300px;
+  height: 60px;
+  background-color: #9AD2D9;
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #071040;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  transition: 0.25s;
+}
+.meow__home .meow__section .button__presale:hover {
+  background-color: #7E0BF0;
+  color: #F2F2F2;
+}
+@media (max-width: 600px) and (orientation: portrait), (max-height: 600px) and (orientation: landscape) {
+  .meow__home .meow__section .button__presale {
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 40px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    bottom: 30px;
+  }
+}
 .meow__home .meownomics__section {
   position: relative;
-  width: 100%;
-  height: 1000px;
+  width: 80%;
+  height: 740px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -327,22 +368,15 @@ body #icon use {
   padding: 50px;
 }
 .meow__home .meownomics__section h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 800;
   color: #F28095;
   margin-bottom: 80px;
 }
-@media (max-width: 1600px) and (orientation: landscape) {
-  .meow__home .meownomics__section {
-    height: 740px;
-  }
-  .meow__home .meownomics__section h2 {
-    font-size: 3rem;
-  }
-}
 @media (max-width: 1300px) and (orientation: landscape) {
   .meow__home .meownomics__section {
     height: 590px;
+    width: 100%;
   }
   .meow__home .meownomics__section h2 {
     font-size: 2.5rem;
@@ -375,16 +409,11 @@ body #icon use {
 }
 .meow__home .meownomics__section .charts .charts__image {
   position: relative;
-  left: calc(-320px + 50% - 350px - 32px);
+  left: calc(-320px + 50% - 250px - 32px);
 }
-@media (max-width: 1600px) and (orientation: landscape) {
-  .meow__home .meownomics__section .charts .charts__image {
-    left: calc(-320px + 50% - 250px - 32px);
-  }
-  .meow__home .meownomics__section .charts .charts__image img {
-    height: 500px;
-    width: auto;
-  }
+.meow__home .meownomics__section .charts .charts__image img {
+  height: 500px;
+  width: auto;
 }
 @media (max-width: 1300px) and (orientation: landscape) {
   .meow__home .meownomics__section .charts .charts__image {
@@ -515,6 +544,84 @@ body #icon use {
 @media (max-width: 1080px) {
   .meow__home .meownomics__section .image__back {
     display: none;
+  }
+}
+.meow__home .presale {
+  padding: 50px;
+  display: flex;
+  width: 80%;
+  align-items: center;
+  margin: auto;
+}
+.meow__home .presale #presale {
+  width: calc(100% - 300px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.meow__home .presale #presale h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #F28095;
+  margin-bottom: 40px;
+}
+.meow__home .presale #presale .presale__content {
+  width: 80%;
+}
+.meow__home .presale #presale .presale__content .presale__group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.meow__home .presale #presale .presale__content .presale__group .presale__item {
+  font-size: 24px;
+  font-weight: 600;
+}
+.meow__home .presale #presale .presale__content .extra {
+  font-size: 24px;
+  font-weight: 600;
+  color: #D99C9C;
+}
+.meow__home .presale .news {
+  width: 300px;
+}
+.meow__home .presale .news .twitter {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: #9AD2D9;
+  animation: loading 1s ease-in-out infinite;
+}
+@media (max-width: 1600px) {
+  .meow__home .presale {
+    width: 100%;
+  }
+}
+@media (max-width: 1000px) {
+  .meow__home .presale #presale h2 {
+    font-size: 1.5rem;
+  }
+  .meow__home .presale #presale .presale__content .presale__group {
+    gap: 16px;
+  }
+  .meow__home .presale #presale .presale__content .presale__group .presale__item {
+    font-size: 18px;
+  }
+  .meow__home .presale #presale .presale__content .extra {
+    font-size: 18px;
+  }
+}
+@media (max-width: 700px) {
+  .meow__home .presale {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+  .meow__home .presale #presale {
+    width: 100%;
+  }
+  .meow__home .presale #presale .presale__content {
+    width: 100%;
   }
 }
 
