@@ -10,21 +10,30 @@
 
   policyDiv.addEventListener('click', ()=>{
     navigator.clipboard.writeText(policyId)
-    .then(()=>alert(`Se a copiado ${policyId}`))
-    .catch(err=>alert(err));
+    .then(()=>popup())
+    .catch(err=>console.log(err));
   })
 
   assetDiv.addEventListener('click', ()=>{
     navigator.clipboard.writeText(asset)
-    .then(()=>alert(`Se a copiado ${asset}`))
-    .catch(err=>alert(err));
+    .then(()=>popup())
+    .catch(err=>console.log(err));
   })
 
   handleDiv.addEventListener('click', ()=>{
     navigator.clipboard.writeText(handle)
-    .then(()=>alert(`Se a copiado ${handle}`))
-    .catch(err=>alert(err));
+    .then(()=>popup())
+    .catch(err=>console.log(err));
   })
+
+  const popup = () =>{
+    const popup = document.getElementById('popup');
+    popup.style.display = 'block';
+    setTimeout(()=>{
+      popup.style.display = 'none';
+    },1000)
+
+  }
 
 
 

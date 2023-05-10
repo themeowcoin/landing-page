@@ -714,4 +714,31 @@ body #icon use {
   font-size: 14px;
   color: #9AD2D9;
   text-align: center;
+}
+.foot__meow #popup {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  background-color: rgba(125, 125, 125, 0.1);
+  display: none;
+}
+.foot__meow #popup .background {
+  position: fixed;
+  top: calc(50vh - 20px);
+  left: calc(50vw - 140px);
+}
+.foot__meow #popup .background p {
+  background-color: #9AD2D9;
+  color: #071040;
+  height: 50px;
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }/*# sourceMappingURL=app.css.map */
