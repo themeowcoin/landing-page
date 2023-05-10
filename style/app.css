@@ -80,6 +80,7 @@ body {
   min-height: 100vh;
   background: linear-gradient(180deg, rgba(1, 28, 38, 0) 0%, rgba(69, 134, 191, 0.45) 77.2%), linear-gradient(245.59deg, rgba(1, 28, 38, 0) 53.49%, rgba(154, 210, 217, 0) 53.5%, rgba(12, 60, 89, 0.2) 77.09%), linear-gradient(113.23deg, rgba(1, 28, 38, 0) 46.97%, rgba(12, 60, 89, 0.2) 63.97%), linear-gradient(201.12deg, rgba(10, 51, 196, 0.25) 25.09%, rgba(12, 60, 89, 0) 84.53%), #011C26;
   background-attachment: scroll;
+  background-size: 100%;
   width: 100%;
 }
 body #icon use {
@@ -196,9 +197,8 @@ body #icon use {
 .meow__home .meow__section {
   display: flex;
   align-items: center;
-  height: 100%;
   padding: 0 50px 200px;
-  min-height: calc(100vh - 100px);
+  height: calc(100vh - 100px);
   width: 100%;
   position: relative;
 }
@@ -213,7 +213,7 @@ body #icon use {
 }
 @media (min-width: 50px) and (orientation: portrait) {
   .meow__home .meow__section {
-    padding: 0 50px;
+    padding: 0 20px;
     background-image: url("../img/background.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -552,6 +552,11 @@ body #icon use {
   width: 80%;
   align-items: center;
   margin: auto;
+}
+@media (max-width: 600px) {
+  .meow__home .presale {
+    padding: 20px;
+  }
 }
 .meow__home .presale #presale {
   width: calc(100% - 500px);
